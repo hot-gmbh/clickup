@@ -1,6 +1,6 @@
 {
   "name": "@hot-gmbh/clickup",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.0-alpha.0",
   "description": "A TypeScript-based client for interacting with the ClickUp API.",
   "main": "dist/index.js",
   "scripts": {
