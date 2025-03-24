@@ -92,7 +92,7 @@ const clickUp = new ClickUp(apiKey: string, baseUrl?: string);
 
 Accessed via `clickUp.teams`
 
-- <strong>`getAll(): Promise&lt;Team[]&gt;`</strong>
+- <strong>`getAll(): Promise<Team[]>`</strong>
 
   - Fetches all teams (workspaces) accessible with the API key
   - Returns an array of `Team` objects
@@ -101,7 +101,7 @@ Accessed via `clickUp.teams`
 
 Accessed via `clickUp.spaces`
 
-- <strong>`getAll(teamId: string | number, includeArchived?: boolean): Promise&lt;Space[]&gt;`</strong>
+- <strong>`getAll(teamId: string | number, includeArchived?: boolean): Promise<Space[]>`</strong>
   - Fetches all spaces for a given team.
   - `teamId`: The ID of the team/workspace.
   - `includeArchived`: Optional, includes archived spaces if `true` (default: `false`).
@@ -111,7 +111,7 @@ Accessed via `clickUp.spaces`
 
 Accessed via `clickUp.folders`
 
-- <strong>`getAll(spaceId: string | number): Promise&lt;Folder[]&gt;`</strong>
+- <strong>`getAll(spaceId: string | number): Promise<Folder[]>`</strong>
   - Fetches all folders within a space.
   - `spaceId`: The ID of the space.
   - Returns an array of `Folder` objects or an empty array if none exist.
@@ -120,21 +120,12 @@ Accessed via `clickUp.folders`
 
 Accessed via `clickUp.lists`
 
-- `getAll(folderId: string | number): Promise&lt;List[]&gt;` - Fetches all lists within a folder. - `folderId`: The ID of the folder. - Returns an array of `List` objects.
+- `getAll(folderId: string | number): Promise<List[]>` - Fetches all lists within a folder. - `folderId`: The ID of the folder. - Returns an array of `List` objects.
 
-- <strong>`getFolderless(spaceId: string | number): Promise&lt;List[]&gt;`</strong>
+- <strong>`getFolderless(spaceId: string | number): Promise<List[]>`</strong>
   - Fetches all lists directly under a space (not in a folder).
   - `spaceId`: The ID of the space.
   - Returns an array of `List` objects.
-
-### Types
-
-<p>The library includes TypeScript interfaces for all resources:</p>
-
-- <strong>`Team`</strong>: `{ id: string, name: string, color: string, avatar: string | null, members: any[] }`</li>
-- <strong>`Space`</strong>: `{ id: string, name: string, color: string, private: boolean, avatar: string | null, admin_can_manage: boolean, statuses: any[], multiple_assignees: boolean, features: any, archived: boolean, members: any[] }`</li>
-- <strong>`Folder`</strong>: `{ id: string, name: string, hidden: boolean }`</li>
-- <strong>`List`</strong>: `{ id: string, name: string, folder?: { id: string, name: string } }`</li>
 
 ## Development
 
