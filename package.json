@@ -1,19 +1,27 @@
 {
-  "name": "clickup",
+  "name": "@hot-gmbh/clickup",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A TypeScript-based client for interacting with the ClickUp API.",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "serve": "node dist/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "clickup",
+    "clickup-api",
+    "clickup-client",
+    "clickup-sdk"
+  ],
+  "author": "hot-gmbh",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.8.4"
   },
   "devDependencies": {
     "typescript": "^5.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

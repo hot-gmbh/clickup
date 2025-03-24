@@ -5,7 +5,7 @@ import { Lists } from "./lists/lists";
 import { Tasks } from "./tasks/tasks";
 import { Folders } from "./folders/folders";
 
-export class Clickup {
+export class ClickUp {
   private axios: Axios;
 
   private baseUrl: string;
